@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Order(models.Model)     
+class Order(models.Model):
     ORDER_STATUS = (
         ('CANCEL', 'Cancelled'),
         ('COMPLETE', 'Completed'),
@@ -15,5 +15,5 @@ class Order(models.Model)
     name = models.CharField(max_length=100)
     status = models.CharField(max_length=20, choices=ORDER_STATUS)
     
-class OrderStatusChangedMessage(models.Model):
-    pass
+# class OrderStatusChangedMessage(models.Model):
+#     pass
